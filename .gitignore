@@ -110,6 +110,7 @@ fabric.properties
 /.codex/auth.json
 /.codex/history.jsonl
 /.codex/internal_storage.json
+/.codex/version.json
 
 /.idea/copilot.data.migration.agent.xml
 /.idea/copilot.data.migration.ask.xml
