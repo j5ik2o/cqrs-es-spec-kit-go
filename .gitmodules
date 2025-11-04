@@ -1,0 +1,6 @@
+[submodule "references/cqrs-es-example-go"]
+	path = references/cqrs-es-example-go
+	url = git@github.com:j5ik2o/cqrs-es-example-go.git
+[submodule "references/event-store-adapter-go"]
+	path = references/event-store-adapter-go
+	url = git@github.com:j5ik2o/event-store-adapter-go.git
