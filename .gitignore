@@ -65,7 +65,7 @@ go.work.sum
 # .idea/modules.xml
 # .idea/*.iml
 # .idea/modules
-# *.iml
+*.iml
 # *.ipr
 
 # CMake
@@ -110,3 +110,10 @@ fabric.properties
 /.codex/auth.json
 /.codex/history.jsonl
 /.codex/internal_storage.json
+
+/.idea/copilot.data.migration.agent.xml
+/.idea/copilot.data.migration.ask.xml
+/.idea/copilot.data.migration.ask2agent.xml
+/.idea/copilot.data.migration.edit.xml
+/.idea/modules.xml
+/.idea/vcs.xml
