@@ -111,7 +111,7 @@ fabric.properties
 /.codex/history.jsonl
 /.codex/internal_storage.json
 /.codex/version.json
-
+/.kamui/
 /.idea/copilot.data.migration.agent.xml
 /.idea/copilot.data.migration.ask.xml
 /.idea/copilot.data.migration.ask2agent.xml
