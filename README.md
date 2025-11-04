@@ -1,1 +1,1 @@
-# cqrs-es-spec-kit-go
+# CQRS/ES Spec Kit for Go 
