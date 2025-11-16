@@ -11,9 +11,10 @@
         "--context",
         "ide-assistant",
         "--project",
-        "."
+        ".",
+        "--enable-web-dashboard",
+        "false"
       ],
-      "cwd": "${PWD}",
       "env": {}
     },
     "context7": {
@@ -25,30 +26,11 @@
       ],
       "env": {}
     },
-    "playwright": {
+    "codex": {
       "type": "stdio",
-      "command": "npx",
+      "command": "codex",
       "args": [
-        "-y",
-        "@playwright/mcp@latest"
-      ],
-      "env": {}
-    },
-    "chrome-devtools": {
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "chrome-devtools-mcp@latest"
-      ],
-      "env": {}
-    },
-    "vibe_kanban": {
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "-y",
-        "vibe-kanban",
-        "--mcp"
+        "mcp-server"
       ],
       "env": {}
     }
