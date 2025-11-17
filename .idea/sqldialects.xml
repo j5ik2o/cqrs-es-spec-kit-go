@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/tools/migrate/migrations/1_create_group_chats.up.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/tools/migrate/migrations/2_create_members.up.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/tools/migrate/migrations/3_create_messages.up.sql" dialect="GenericSQL" />
+  </component>
+</project>
