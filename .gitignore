@@ -118,8 +118,8 @@ fabric.properties
 /.idea/copilot.data.migration.edit.xml
 /.idea/modules.xml
 /.idea/vcs.xml
-/.copilot/.copilot/logs/
-/.copilot/configstore/update-notifier-@github/
+/.copilot/logs/
+/.configstore/update-notifier-@github/
 
 # Docker and Database
 .docker/
