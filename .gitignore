@@ -120,3 +120,12 @@ fabric.properties
 /.idea/vcs.xml
 /.copilot/.copilot/logs/
 /.copilot/configstore/update-notifier-@github/
+
+# Docker and Database
+.docker/
+postgres_data/
+localstack_data/
+*.log
+
+# Test data
+testdata/
