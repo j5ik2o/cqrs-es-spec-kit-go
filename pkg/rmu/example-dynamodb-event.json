@@ -1,0 +1,48 @@
+{
+  "Records": [
+    {
+      "eventID": "f07f8ca4b0b26cb9c4e5e77e69f274ee",
+      "eventName": "INSERT",
+      "eventVersion": "1.1",
+      "eventSource": "aws:dynamodb",
+      "awsRegion": "us-east-1",
+      "userIdentity": {
+        "type": "Service",
+        "principalId": "dynamodb.amazonaws.com"
+      },
+      "dynamodb": {
+        "ApproximateCreationDateTime": 1480642020,
+        "Keys": {
+          "pkey": {
+            "S": "group-chat-33"
+          },
+          "skey": {
+            "S": "group-chat-1"
+          }
+        },
+        "NewImage": {
+          "pkey": {
+            "S": "group-chat-33"
+          },
+          "skey": {
+            "S": "group-chat-1"
+          },
+          "aid": {
+            "S": "01H4ZC8VY8ZJEPF4PB3T3GM95X"
+          },
+          "seq_nr": {
+            "N": "1"
+          },
+          "payload": {
+            "S": "{\"aggregate_id\":{\"value\":\"01HF9YV0G3H8JPCNKGEY8Q4RSZ\"},\"executor_id\":{\"value\":\"01HF9YV0G3H8JPCNKGEXDNH21X\"},\"id\":\"01HF9YV0G3H8JPCNKGF0CYMNJZ\",\"members\":{\"values\":[{\"id\":{\"value\":\"01HF9YV0G3H8JPCNKGEZPEKVSY\"},\"role\":1,\"user_account_id\":{\"value\":\"01HF9YV0G3H8JPCNKGEXDNH21X\"}}]},\"name\":{\"value\":\"test\"},\"occurred_at\":1700067639811,\"seq_nr\":1,\"type_name\":\"GroupChatCreated\"}"
+          }
+        },
+        "SequenceNumber": "1405400000000002063282832",
+        "SizeBytes": 54,
+        "StreamViewType": "NEW_IMAGE"
+      },
+      "eventSourceARN": "arn:aws:dynamodb:us-east-1:123456789012:table/Example-Table/stream/2016-12-01T00:00:00.000"
+    }
+  ]
+}
+
