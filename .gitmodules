@@ -4,3 +4,6 @@
 [submodule "references/event-store-adapter-go"]
 	path = references/event-store-adapter-go
 	url = git@github.com:j5ik2o/event-store-adapter-go.git
+[submodule "references/cqrs-es-spec-kit-js"]
+	path = references/cqrs-es-spec-kit-js
+	url = git@github.com:j5ik2o/cqrs-es-spec-kit-js.git

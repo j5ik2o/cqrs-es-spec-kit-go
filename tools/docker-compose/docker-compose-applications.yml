@@ -24,36 +24,41 @@ services:
       - localstack
       - dynamodb-admin
       - dynamodb-setup
-  read-model-updater-1:
+  lambda-setup:
     image: cqrs-es-spec-kit-go-rmu:latest
-    container_name: read-model-updater-1
-    entrypoint: ["/var/runtime/bootstrap"]
-    command: ["localRmu"]
-    ports:
-      - 28081:8080
+    container_name: lambda-setup
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        echo "Installing aws-cli..."
+        yum install -y aws-cli
+        echo "Deploying Lambda function..."
+        /scripts/deploy-lambda.sh
+        echo "Creating event source mapping..."
+        /scripts/create-event-mapping.sh
+        echo "Lambda setup completed"
     environment:
       AWS_REGION: ${AWS_REGION}
-      API_HOST: "0.0.0.0"
-      API_PORT: 8080
-      AWS_REGION_NAME: ${AWS_REGION}
-      AWS_DYNAMODB_ENDPOINT_URL: http://localstack:4566
-      AWS_DYNAMODB_ACCESS_KEY_ID: x
-      AWS_DYNAMODB_SECRET_ACCESS_KEY: x
+      AWS_ENDPOINT_URL: http://localstack:4566
+      AWS_ACCESS_KEY_ID: x
+      AWS_SECRET_ACCESS_KEY: x
+      LAMBDA_FUNCTION_NAME: read-model-updater
+      LAMBDA_ZIP_PATH: /lambda/function.zip
+      DATABASE_URL: ceer:ceer@tcp(192.168.65.254:23306)/ceer
       STREAM_JOURNAL_TABLE_NAME: journal
-      STREAM_MAX_ITEM_COUNT: 32
-      DATABASE_URL: ceer:ceer@tcp(mysql-local:3306)/ceer
+      EVENT_BATCH_SIZE: 10
+      MAX_RETRY_ATTEMPTS: 2
+    volumes:
+      - ../lambda-setup:/scripts:ro
     depends_on:
       mysql:
         condition: service_healthy
       migration:
         condition: service_completed_successfully
       localstack:
-        condition: service_started
-      dynamodb-admin:
-        condition: service_started
+        condition: service_healthy
       dynamodb-setup:
-        condition: service_started
-    restart: on-failure
+        condition: service_completed_successfully
   read-api-server-1:
     command: [ "readApi" ]
     image: cqrs-es-spec-kit-go:latest
@@ -70,4 +75,4 @@ services:
       - mysql
       - migration
       - write-api-server-1
-      - read-model-updater-1
+      - lambda-setup
