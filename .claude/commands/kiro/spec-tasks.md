@@ -73,3 +73,5 @@ Show Subagent summary to user, then provide next step guidance:
 - Existing tasks used as reference (merge mode)
 
 **Note**: The implementation phase will guide you through executing tasks with appropriate context and validation.
+
+ultrathink

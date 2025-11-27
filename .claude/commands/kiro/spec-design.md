@@ -62,3 +62,5 @@ Show Subagent summary to user, then provide next step guidance:
 - Existing design used as reference (merge mode)
 
 **Note**: Design approval is mandatory before proceeding to task generation.
+
+ultrathink
